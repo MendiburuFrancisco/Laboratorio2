@@ -12,7 +12,7 @@ namespace LabSintaxis4
             //   problema4()
             //  problema5();
             // problema6();
-            problema7(); 
+            // problema7(); 
             // problema8();
             //problema9();
              
