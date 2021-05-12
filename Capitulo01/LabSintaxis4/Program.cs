@@ -12,10 +12,10 @@ namespace LabSintaxis4
             //   problema4()
             //  problema5();
             // problema6();
-            //problema7(); 
+            problema7(); 
             // problema8();
             //problema9();
-            nrosPrimos();
+             
         }
 
         private static void problema1()
@@ -149,13 +149,24 @@ namespace LabSintaxis4
         {
             int[] numerosPrimos = nrosPrimos(); 
 
+            for(int posNumero = 1; posNumero < numerosPrimos.Length; posNumero++)
+            {
+                int numeroAnterior = numerosPrimos[posNumero-1];
+                int numero = numerosPrimos[posNumero];
+                int resta = numero - numeroAnterior; 
+                if(resta == 2)
+                {
+                    Console.WriteLine($"{numero} y {numeroAnterior} son nros Primos gemelos");
+                }
+            }
         }
 
         private static int[] nrosPrimos()
         {
-            int[] numerosPrimos = new int[24];
+            int[] numerosPrimos = new int[25];
             int numero = 2;
             int total = 1;
+            int contador = 0;
 
             while (total <= 25)
             {
@@ -171,10 +182,12 @@ namespace LabSintaxis4
                 }
                  if (esPrimo)
                 {
+                    
 
-                    numerosPrimos[total-1] = numero;
-                    Console.WriteLine(numero);
-                     total++;
+                    numerosPrimos[contador] = numero;
+                    contador += 1;
+                    // Console.WriteLine(numero);
+                    total++;
                 }
 
                 numero++;
